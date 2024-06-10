@@ -1,0 +1,4 @@
+login_host: db-prod.daws78s.site
+mysql_root_password: ExpenseApp@1
+DB_HOST: db-prod.daws78s.site
+BACKEND-API-URL: backend.app-prod.daws78s.site

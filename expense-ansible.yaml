@@ -1,0 +1,22 @@
+- name: create ec2 and r53 records
+  hosts: localhost
+  tasks:
+  - name: create ec2 instance
+    amazon.aws.ec2_instance:
+      instance_type: t2.micro
+      security_group: Allow-all-devops-78s
+      image_id: ami-090252cbe067a9e58
+      name: "{{ item }}"
+      tags:
+        name: "{{ item }}"
+    loop:
+    - db
+    - backend
+    - frontend
+    register: ec2_instances-info
+  - name: print output
+    ansible.builtin.debug:
+      msg: "output: {{ ec2_instances-info }}"
+
+  - name: update r53 recors
+    amazon.aws.route53:
