@@ -2,3 +2,4 @@ login_host: db-dev.daws78s.site
 mysql_root_password: ExpenseApp@1
 DB_HOST: db-dev.daws78s.site
 BACKEND-API-URL: backend.app-dev.daws78s.site
+nexus_url: nexus.daws78s.site:8081
